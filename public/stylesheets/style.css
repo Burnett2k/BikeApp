@@ -1,0 +1,92 @@
+#photo{
+	margin-left:auto;
+	margin-right:auto;
+}
+#bike-form-div{
+	display:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+#add-bike-form{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+#add-maint-rec-form{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+.spacer60{
+	padding-left:60px;
+	padding-right:60px;
+}
+#btn-div{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+.carousel{
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#carouselInner{
+	background:#C0C0C0;
+}
+
+.carousel-control{
+	top: 40%;
+	width:0px;
+	color:#006699;
+	opacity:0.9;
+	background:#FFFFFF;
+	height:0px;
+}
+.carousel-control:hover{
+	color:#C0C0C0;
+	opacity:0.9;
+}
+.carousel-control.left{
+	left: -30px;
+	font-size:150%;
+}
+.carousel-control.right{
+	right: -30px;
+	font-size:150%;
+}
+.carousel-inner > .item > img{
+	min-height:200px;
+	position:relative;
+	bottom:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+.item{
+	top:50%;
+	color:#FFFFFF;
+	height:200px;
+	width:200px;
+	line-height:200px;
+}
+body {
+	margin-top: 20px;  
+	height: 100%;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+section#main{
+	height: 100%;
+	float: left;
+	display: inline;
+}
+.left_col {
+	float: left;
+	width: 200px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;  
+	height: 100%;
+}
+

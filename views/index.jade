@@ -1,0 +1,63 @@
+extends layout
+
+block content
+ section(id="main")
+  h1#topTitle= title
+  -if(user){
+  p Welcome #{user.displayName}
+  p ID: #{user.id}
+  p Username: #{user.provider};
+  div#mainDiv
+   div(data-bind="with: selectedBike")
+    img(data-bind="attr: { src: '/img/thumbs/' + img() }")
+   
+   
+  div(id="bike-form-div")
+   form(id="add-bike-form", action='/createBike',method="post", enctype='multipart/form-data')
+    h2 Add New Bike
+    div
+     span Brand :
+     input(type="text", name="brand", id="brand")
+    div
+     span Model :
+     input(type="text", name="model", id="model")
+    div
+     span Year :
+     input(type="text", name="year", id="year")
+    div
+     span Type :
+     select(name="bikeType")
+      option(value="Road") Road
+      option(value="Mountain") Mountain
+      option(value="Hybrid") Hybrid
+    div
+     span Image :
+     input(type="file", name="photo", id="photo")
+    div#newBikeSubmit
+     input(type="submit",value="Create", class="btn btn-success btn-mini") 
+     span(class="spacer60")
+     input(id="add-bike-cancel", value="Cancel", type="button", class="btn btn-danger btn-mini")
+  -}else{
+   p Please login!
+  -}
+  
+  script(type='text/javascript')
+   //document.getElementById('add-bike-button').onclick = function(){
+   //showBikeForm();
+   //};
+   //document.getElementById('add-bike-cancel').onclick = function(){
+   //hideBikeForm();  
+   //};
+   function showBikeForm(){
+    //document.getElementById('bike-form-div').style.display="block";
+    var toShow = document.getElementById('bike-form-div');
+    $(toShow).fadeIn();
+    return false;
+   }
+   function hideBikeForm(){
+    //document.getElementById('bike-form-div').style.display="none";
+    var toHide = document.getElementById('bike-form-div');
+    $(toHide).fadeOut();
+    return false;
+    document.getElementById('add-bike-form').reset();
+   }

@@ -1,0 +1,27 @@
+doctype 5
+html
+  head
+    link(rel='stylesheet', href='/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class="left_col")
+      ul(class="nav nav-list")
+       li(class="nav-header") BikeUpkeep
+       li
+        a(href="#") About
+       li
+        -if(user)
+         a(href="#{host}/logout") Logout
+        -else
+         a(href="#{host}/auth/google") Login
+       li
+        a(href="#") Contact Us
+       li(class="nav-header") Bikes
+       li(data-bind="foreach: bikes")
+        a(data-bind="text: displayName, click: $parent.selectedBike, css: { }")
+   block content
+
+script(type='text/javascript', src="http://code.jquery.com/jquery-latest.min.js");
+script(type='text/javascript', src='/js/bootstrap.js');
+script(type='text/javascript', src="js/knockout.js");	
+script(src="js/bikeModel.js");

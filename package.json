@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.3",
+    "jade": "*",
+    "stylus": "*",
+    "mongodb": ">= 0.9.6-7",
+    "passport": ">=0.0.0",
+    "passport-google-oauth":"*",
+    "passport-twitter":">=0.0.0",
+    "path":">=0.0.0",
+    "mongoose":"*",
+    "imagemagick":"*"
+  }
+}
